@@ -1,5 +1,7 @@
 package types.result;
 
+import java.util.function.Function;
+
 public class Err<T, E> implements Result<T, E> {
 	private final E error;
 
@@ -27,4 +29,18 @@ public class Err<T, E> implements Result<T, E> {
 		return this.error;
 	}
 
+	@Override
+	public <U> Result<U, E> map(Function<T, U> mapper) {
+		return new Err<>(error); // no value to map
+	}
+
+	@Override
+	public <F> Result<T, F> mapErr(Function<E, F> mapper) {
+		return new Err<>(mapper.apply(error));
+	}
+
+	@Override
+	public <U> Result<U, E> andThen(Function<T, Result<U, E>> fn) {
+		return new Err<>(error); // cannot chain on error values
+	}
 }

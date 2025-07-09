@@ -16,10 +16,10 @@ src/
 │   └── user/
 │       └── UserService.java
 └── types/
-└── result/
-├── Result.java
-├── Ok.java
-└── Err.java
+    └── result/
+        ├── Result.java
+        ├── Ok.java
+        └── Err.java
 </pre>
 
 ---

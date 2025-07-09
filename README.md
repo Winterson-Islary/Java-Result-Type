@@ -89,7 +89,10 @@ Error [404]: User not found
 
 ### Future Improvements
 
-* Add map(), mapErr(), and andThen() methods
-* Turn this into a Maven project
-* Integrate with a web framework (like Spring Boot)
-* Add unit tests
+* [x] Add map(), mapErr(), and andThen() methods
+
+* [ ] Turn this into a Maven project
+
+* [ ] Integrate with a web framework (like Spring Boot)
+
+* [ ] Add unit tests
